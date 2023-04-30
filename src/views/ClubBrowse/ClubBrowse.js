@@ -104,7 +104,7 @@ const ClubBrowse = ({history}) => {
     }, [clubs, auth])
 
 
-console.log(auth.user)
+
 
     return(
         <>

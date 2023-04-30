@@ -50,7 +50,7 @@ const App = () => {
   const [shownNotif, setShownNotif] = useState(false);
   const [userClubContext, setUserClubContext] = useState(null);
   const { instance, accounts } = useMsal();
-  console.log(`${process.env.REACT_APP_CLUB_API}`);
+ 
 
   useEffect(() => {
     document.title = "HSE Clubs";
@@ -95,7 +95,7 @@ const App = () => {
         user: auth,
       }
     );
-    console.log(selectionRes, "SELECTION RES");
+  
     if (!selectionRes.data.errors) {
       setAuth((prev) => ({
         isAuth: true,
@@ -201,7 +201,7 @@ useEffect(() => {
             user: auth,
           }
         );
-        console.log(selectionRes, "SELECTION RES");
+      
         if (!selectionRes.data.errors) {
           setAuth((prev) => ({
             isAuth: true,
@@ -221,7 +221,7 @@ useEffect(() => {
 
  
 
-  console.log(auth.user);
+
   return (
     <AuthContext.Provider value={{ auth, setAuth }}>
     <UserClubContext.Provider value={{ userClubContext, setUserClubContext }}>

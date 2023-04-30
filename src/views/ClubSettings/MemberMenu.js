@@ -42,7 +42,7 @@ const MemberMenu = ({form, errors, edited, setEdited, clubMembers, setForm, club
 
     const promoteMember = async (idToPromote) => {
 
-        console.log("bruh")
+
         try{
             const clubRes = await axios.put(`${process.env.REACT_APP_CLUB_API}/club/${club.url}/members/${idToPromote}/promote`)
             

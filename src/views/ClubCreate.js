@@ -114,7 +114,6 @@ const ClubSettings = ({history}) => {
 
             setClubContext({...clubContext, [clubRes.data.url] : clubRes.data})
 
-            console.log(clubRes)
             if(clubRes.data){
                 message.success('Club Created!', 5)
                 history.push('/clubs/' +clubRes.data.url)
@@ -253,7 +252,7 @@ const ClubSettings = ({history}) => {
                                                 value={form.tags}
                                                 handleSelect={(e) => {
                                                     setEdited(true)
-                                                    console.log(form.tags.length)
+                                                    
                                                     if(form.tags.length >= 3){
                                                         setErrors([{"msg": "You can only have 3 tags"}])
                                                     } else {

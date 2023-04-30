@@ -17,7 +17,7 @@ const Navbar = ({testToken}) => {
 
     const history = useHistory()
 
-    console.log()
+   
 
 
     const {auth, setAuth} = useContext(AuthContext)
